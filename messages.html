@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Mon Jun 26 2023 11:52:41 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="64981c978a5f28dad0b960ed" data-wf-site="64980d4d967f834839fa9d4b">
+	<head>
+		<meta charset="utf-8" />
+		<title>Messages</title>
+		<meta content="Messages" property="og:title" />
+		<meta content="Messages" property="twitter:title" />
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="Webflow" name="generator" />
+		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+		<link href="css/webflow.css" rel="stylesheet" type="text/css" />
+		<link href="css/livleymeetings-admin.webflow.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			WebFont.load({
+				google: {
+					families: [
+						'Varela:400',
+						'Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic',
+					],
+				},
+			})
+		</script>
+		<script type="text/javascript">
+			!(function (o, c) {
+				var n = c.documentElement,
+					t = ' w-mod-'
+				;(n.className += t + 'js'),
+					('ontouchstart' in o || (o.DocumentTouch && c instanceof DocumentTouch)) && (n.className += t + 'touch')
+			})(window, document)
+		</script>
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link href="images/webclip.png" rel="apple-touch-icon" />
+	</head>
+	<body>
+		<section class="dashboard-section wf-section">
+			<div class="sidenav-wrapper">
+				<img src="images/Cancel.svg" loading="lazy" data-w-id="7bc4ca62-bbe2-8104-be96-9de1014c97ea" alt="" class="cancel-icon" />
+				<div class="logo-wrapper">
+					<div class="logo-block"><img src="images/Lively-logo.svg" loading="lazy" width="139" alt="" /></div>
+				</div>
+				<div class="navlink-wrapper">
+					<a href="index.html" class="nav-link w-inline-block"
+						><img src="images/Home-3.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
+						<div class="nav-link-text">Dashboard</div>
+					</a>
+					<a href="messages.html" aria-current="page" class="nav-link current w-inline-block w--current"
+						><img src="images/Headphone-1.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
+						<div class="nav-link-text">Messages</div>
+					</a>
+					<a href="transcripts.html" class="nav-link w-inline-block"
+						><img src="images/Document-Align-Left-7.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
+						<div class="nav-link-text">Transcripts</div>
+					</a>
+					<a href="photo-gallery.html" class="nav-link w-inline-block"
+						><img src="images/Image.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
+						<div class="nav-link-text">Gallery</div>
+					</a>
+					<a href="#" class="nav-link w-inline-block"
+						><img src="images/Tick-Square.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
+						<div class="nav-link-text">Settings</div>
+					</a>
+					<a href="#" class="nav-link w-inline-block"
+						><img src="images/Logout.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
+						<div class="nav-link-text">Logout</div>
+					</a>
+				</div>
+			</div>
+			<div class="top-nav">
+				<div class="top-nav-flex">
+					<div data-w-id="7bc4ca62-bbe2-8104-be96-9de1014c9809" class="topnav-img-box menu">
+						<img src="images/Menu2.svg" loading="lazy" width="61" alt="" />
+					</div>
+					<div class="nav-head-text">Messages</div>
+					<div class="topnav-img-box">
+						<img
+							src="images/Avatar2.png"
+							loading="lazy"
+							width="61"
+							sizes="(max-width: 479px) 30px, 50px"
+							srcset="images/Avatar2-p-500.png 500w, images/Avatar2.png 515w"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+			<div class="dashboard-container">
+				<div class="body-wrapper">
+					<div class="table-container">
+						<div class="table-header">
+							<div class="th-box">
+								<div class="table-searchbox">
+									<div class="w-form">
+										<form
+											id="email-form"
+											name="email-form"
+											data-name="Email Form"
+											method="get"
+											class="table-search-form"
+											data-wf-page-id="64981c978a5f28dad0b960ed"
+											data-wf-element-id="db4beced-dca0-a0f4-c71b-ecb3fdedf11d"
+										>
+											<input
+												type="text"
+												class="search-field w-input"
+												maxlength="256"
+												name="name"
+												data-name="Name"
+												placeholder="Search here"
+												id="name"
+											/>
+										</form>
+										<div class="w-form-done">
+											<div>Thank you! Your submission has been received!</div>
+										</div>
+										<div class="w-form-fail">
+											<div>Oops! Something went wrong while submitting the form.</div>
+										</div>
+									</div>
+								</div>
+								<div class="table-buttons">
+									<a href="new-message.html" class="dash-btn left w-button">Add new</a>
+									<a href="#" class="dash-btn secondary w-button">Export Data</a>
+								</div>
+							</div>
+						</div>
+						<div class="table-summary">
+							<div class="summary-text"><span class="summary-bg">15</span> Messages</div>
+						</div>
+						<div class="table-scroll">
+							<div class="table-content">
+								<div class="table-headings">
+									<div class="table-th title">Title</div>
+									<div class="table-th">Minister</div>
+									<div class="table-th">Date</div>
+									<div class="table-th">Created At</div>
+									<div class="table-th">Actions</div>
+								</div>
+								<div class="table-headings t-content">
+									<div id="w-node-_75926f57-b87a-763b-205a-f2132dff4e22-d0b960ed" class="table-image-block">
+										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
+										<div id="w-node-b8e2dc2c-a392-6054-eae6-452b619bf7e7-d0b960ed" class="table-th t-content title">
+											Blessedness of True Fatherhood
+										</div>
+									</div>
+									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
+										<div class="dropdown-toggle w-dropdown-toggle">
+											<div class="w-icon-dropdown-toggle"></div>
+											<div class="text-block-2">More</div>
+										</div>
+										<nav class="w-dropdown-list">
+											<a href="#" class="w-dropdown-link">Link 1</a>
+											<a href="#" class="w-dropdown-link">Link 2</a>
+											<a href="#" class="w-dropdown-link">Link 3</a>
+										</nav>
+									</div>
+								</div>
+								<div class="table-headings t-content">
+									<div id="w-node-_959dc339-f7ea-84f3-750d-441162a52e3d-d0b960ed" class="table-image-block">
+										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
+										<div id="w-node-_959dc339-f7ea-84f3-750d-441162a52e3f-d0b960ed" class="table-th t-content title">
+											Blessedness of True Fatherhood
+										</div>
+									</div>
+									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
+										<div class="dropdown-toggle w-dropdown-toggle">
+											<div class="w-icon-dropdown-toggle"></div>
+											<div class="text-block-2">More</div>
+										</div>
+										<nav class="w-dropdown-list">
+											<a href="#" class="w-dropdown-link">Link 1</a>
+											<a href="#" class="w-dropdown-link">Link 2</a>
+											<a href="#" class="w-dropdown-link">Link 3</a>
+										</nav>
+									</div>
+								</div>
+								<div class="table-headings t-content">
+									<div id="w-node-c077deac-7ebb-5ad1-bf01-6b287fd6df3b-d0b960ed" class="table-image-block">
+										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
+										<div id="w-node-c077deac-7ebb-5ad1-bf01-6b287fd6df3d-d0b960ed" class="table-th t-content title">
+											Blessedness of True Fatherhood
+										</div>
+									</div>
+									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
+										<div class="dropdown-toggle w-dropdown-toggle">
+											<div class="w-icon-dropdown-toggle"></div>
+											<div class="text-block-2">More</div>
+										</div>
+										<nav class="w-dropdown-list">
+											<a href="#" class="w-dropdown-link">Link 1</a>
+											<a href="#" class="w-dropdown-link">Link 2</a>
+											<a href="#" class="w-dropdown-link">Link 3</a>
+										</nav>
+									</div>
+								</div>
+								<div class="table-headings t-content">
+									<div id="w-node-c20ba5ce-99c4-b79d-f8fa-ba7029d3826b-d0b960ed" class="table-image-block">
+										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
+										<div id="w-node-c20ba5ce-99c4-b79d-f8fa-ba7029d3826d-d0b960ed" class="table-th t-content title">
+											Blessedness of True Fatherhood
+										</div>
+									</div>
+									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
+										<div class="dropdown-toggle w-dropdown-toggle">
+											<div class="w-icon-dropdown-toggle"></div>
+											<div class="text-block-2">More</div>
+										</div>
+										<nav class="w-dropdown-list">
+											<a href="#" class="w-dropdown-link">Link 1</a>
+											<a href="#" class="w-dropdown-link">Link 2</a>
+											<a href="#" class="w-dropdown-link">Link 3</a>
+										</nav>
+									</div>
+								</div>
+								<div class="table-headings t-content">
+									<div id="w-node-_3fc25860-3bba-211a-fe16-2e0311af5e85-d0b960ed" class="table-image-block">
+										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
+										<div id="w-node-_3fc25860-3bba-211a-fe16-2e0311af5e87-d0b960ed" class="table-th t-content title">
+											Blessedness of True Fatherhood
+										</div>
+									</div>
+									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
+										<div class="dropdown-toggle w-dropdown-toggle">
+											<div class="w-icon-dropdown-toggle"></div>
+											<div class="text-block-2">More</div>
+										</div>
+										<nav class="w-dropdown-list">
+											<a href="#" class="w-dropdown-link">Link 1</a>
+											<a href="#" class="w-dropdown-link">Link 2</a>
+											<a href="#" class="w-dropdown-link">Link 3</a>
+										</nav>
+									</div>
+								</div>
+								<div class="table-headings t-content">
+									<div id="w-node-a85edffc-93bb-5654-f13e-bf700b59dd80-d0b960ed" class="table-image-block">
+										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
+										<div id="w-node-a85edffc-93bb-5654-f13e-bf700b59dd82-d0b960ed" class="table-th t-content title">
+											Blessedness of True Fatherhood
+										</div>
+									</div>
+									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div class="table-th t-content">18/06/2023</div>
+									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
+										<div class="dropdown-toggle w-dropdown-toggle">
+											<div class="w-icon-dropdown-toggle"></div>
+											<div class="text-block-2">More</div>
+										</div>
+										<nav class="w-dropdown-list">
+											<a href="#" class="w-dropdown-link">Link 1</a>
+											<a href="#" class="w-dropdown-link">Link 2</a>
+											<a href="#" class="w-dropdown-link">Link 3</a>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script
+			src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=64980d4d967f834839fa9d4b"
+			type="text/javascript"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+			crossorigin="anonymous"
+		></script>
+		<script src="../js/webflow.js" type="text/javascript"></script>
+	</body>
+</html>

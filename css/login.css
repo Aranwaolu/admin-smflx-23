@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('/assets/fonts/clash-display/css/clash-display.css');
+@import url('/assets/fonts/sofia-pro/css/sofia-pro.css');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+}
+
+.login-form-cont{
+    width: 457px;
+    height: 550px;
+   margin: 10% auto;
+
+}
+.logo img{
+width: 123px;
+height: 62.70588302612305px;
+
+}
+form {
+    margin-top: 3em;
+
+}
+form >h3{
+width: 256px;
+height: 39px;
+font-family: 'ClashDisplay-Medium', sans-serif;
+font-size: 34px;
+font-weight: 700;
+line-height: 39px;
+letter-spacing: 0em;
+text-align: left;
+color: #1A0224;
+}
+form >p{
+    width: 500px;
+    height: 21px;
+    font-family:'ClashDisplay-Medium', sans-serif;
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 21px;
+     letter-spacing: 0em;
+    text-align: left;
+    color: #1A0224;
+    margin-top: 1em;
+
+}
+.input-cont{
+    margin-top: 3em;
+}
+label{
+    width: 106px;
+    height: 21px;
+    font-family:'ClashDisplay-Medium', sans-serif ;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    text-align: center;
+}
+
+input{
+width:100%;
+height: Fixed (55px);
+padding: 24px 0px 24px 26px;
+border-radius: 3px;
+border: 1px;
+gap: 16px;
+border: 1px solid #65656533;
+color: linear-gradient(0deg, rgba(101, 101, 101, 0.2), rgba(101, 101, 101, 0.2));
+margin: 1em 0px;
+}
+input::placeholder{
+    color: rgba(128, 128, 128, 0.904);
+}
+ button{
+width:  204px;
+height: 48px;
+gap: 12px;
+border-radius: 6px;
+margin-top: 1em;
+font-family: 'ClashDisplay-Medium', sans-serif;
+font-size: 16px;
+font-weight: 400;
+line-height: 26px;
+color: #FFFFFF;
+letter-spacing: 0em;
+text-align: center;
+background: #C82127;
+outline: none;
+border: none;
+
+ }
+ @media(max-width:1024px) {
+    .main-container{
+        width: 100%;
+        height: 100vh;
+        display: block;
+    
+    }
+    .login-form-cont{
+        width: 457px;
+        height: 550px;
+       margin: 10% 10%;
+    
+    }
+    
+    
+ }
