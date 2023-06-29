@@ -10,6 +10,7 @@
 		<meta content="width=device-width, initial-scale=1" name="viewport" />
 		<meta content="Webflow" name="generator" />
 		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+		<link href="css/misc.css" rel="stylesheet" type="text/css" />
 		<link href="css/webflow.css" rel="stylesheet" type="text/css" />
 		<link href="css/livleymeetings-admin.webflow.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -36,7 +37,8 @@
 		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<link href="images/webclip.png" rel="apple-touch-icon" />
 	</head>
-	<body>
+
+	<body onload="initMessages()">
 		<section class="dashboard-section wf-section">
 			<div class="sidenav-wrapper">
 				<img src="images/Cancel.svg" loading="lazy" data-w-id="7bc4ca62-bbe2-8104-be96-9de1014c97ea" alt="" class="cancel-icon" />
@@ -44,19 +46,19 @@
 					<div class="logo-block"><img src="images/Lively-logo.svg" loading="lazy" width="139" alt="" /></div>
 				</div>
 				<div class="navlink-wrapper">
-					<a href="index.html" class="nav-link w-inline-block"
+					<a href="index" class="nav-link w-inline-block"
 						><img src="images/Home-3.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
 						<div class="nav-link-text">Dashboard</div>
 					</a>
-					<a href="messages.html" aria-current="page" class="nav-link current w-inline-block w--current"
+					<a href="messages" aria-current="page" class="nav-link current w-inline-block w--current"
 						><img src="images/Headphone-1.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
 						<div class="nav-link-text">Messages</div>
 					</a>
-					<a href="transcripts.html" class="nav-link w-inline-block"
+					<a href="transcripts" class="nav-link w-inline-block"
 						><img src="images/Document-Align-Left-7.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
 						<div class="nav-link-text">Transcripts</div>
 					</a>
-					<a href="photo-gallery.html" class="nav-link w-inline-block"
+					<a href="photo-gallery" class="nav-link w-inline-block"
 						><img src="images/Image.svg" loading="lazy" width="22" alt="" class="nav-link-icon" />
 						<div class="nav-link-text">Gallery</div>
 					</a>
@@ -88,14 +90,41 @@
 					</div>
 				</div>
 			</div>
-			<div class="dashboard-container">
+
+			<div class="loader-container" id="message-loader">
+				<svg
+					version="1.1"
+					id="L9"
+					xmlns="http://www.w3.org/2000/svg"
+					xmlns:xlink="http://www.w3.org/1999/xlink"
+					x="0px"
+					y="0px"
+					viewBox="0 0 100 100"
+					enable-background="new 0 0 0 0"
+					xml:space="preserve"
+				>
+					<path fill="#333" d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50">
+						<animateTransform
+							attributeName="transform"
+							attributeType="XML"
+							type="rotate"
+							dur=".6s"
+							from="0 50 50"
+							to="360 50 50"
+							repeatCount="indefinite"
+						/>
+					</path>
+				</svg>
+			</div>
+
+			<div class="dashboard-display-container" id="messages--main-container">
 				<div class="body-wrapper">
 					<div class="table-container">
 						<div class="table-header">
 							<div class="th-box">
 								<div class="table-searchbox">
 									<div class="w-form">
-										<form
+										<!-- <form
 											id="email-form"
 											name="email-form"
 											data-name="Email Form"
@@ -113,7 +142,7 @@
 												placeholder="Search here"
 												id="name"
 											/>
-										</form>
+										</form> -->
 										<div class="w-form-done">
 											<div>Thank you! Your submission has been received!</div>
 										</div>
@@ -123,16 +152,15 @@
 									</div>
 								</div>
 								<div class="table-buttons">
-									<a href="new-message.html" class="dash-btn left w-button">Add new</a>
-									<a href="#" class="dash-btn secondary w-button">Export Data</a>
+									<a href="new-message" class="dash-btn left w-button">Add new</a>
 								</div>
 							</div>
 						</div>
 						<div class="table-summary">
-							<div class="summary-text"><span class="summary-bg">15</span> Messages</div>
+							<div class="summary-text"><span class="messages-summary-bg summary-bg">0</span> Messages</div>
 						</div>
 						<div class="table-scroll">
-							<div class="table-content">
+							<div class="table-content" id="table-content">
 								<div class="table-headings">
 									<div class="table-th title">Title</div>
 									<div class="table-th">Minister</div>
@@ -140,140 +168,18 @@
 									<div class="table-th">Created At</div>
 									<div class="table-th">Actions</div>
 								</div>
-								<div class="table-headings t-content">
-									<div id="w-node-_75926f57-b87a-763b-205a-f2132dff4e22-d0b960ed" class="table-image-block">
-										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
-										<div id="w-node-b8e2dc2c-a392-6054-eae6-452b619bf7e7-d0b960ed" class="table-th t-content title">
-											Blessedness of True Fatherhood
-										</div>
-									</div>
-									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<div class="w-icon-dropdown-toggle"></div>
-											<div class="text-block-2">More</div>
-										</div>
-										<nav class="w-dropdown-list">
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
-								<div class="table-headings t-content">
-									<div id="w-node-_959dc339-f7ea-84f3-750d-441162a52e3d-d0b960ed" class="table-image-block">
-										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
-										<div id="w-node-_959dc339-f7ea-84f3-750d-441162a52e3f-d0b960ed" class="table-th t-content title">
-											Blessedness of True Fatherhood
-										</div>
-									</div>
-									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<div class="w-icon-dropdown-toggle"></div>
-											<div class="text-block-2">More</div>
-										</div>
-										<nav class="w-dropdown-list">
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
-								<div class="table-headings t-content">
-									<div id="w-node-c077deac-7ebb-5ad1-bf01-6b287fd6df3b-d0b960ed" class="table-image-block">
-										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
-										<div id="w-node-c077deac-7ebb-5ad1-bf01-6b287fd6df3d-d0b960ed" class="table-th t-content title">
-											Blessedness of True Fatherhood
-										</div>
-									</div>
-									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<div class="w-icon-dropdown-toggle"></div>
-											<div class="text-block-2">More</div>
-										</div>
-										<nav class="w-dropdown-list">
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
-								<div class="table-headings t-content">
-									<div id="w-node-c20ba5ce-99c4-b79d-f8fa-ba7029d3826b-d0b960ed" class="table-image-block">
-										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
-										<div id="w-node-c20ba5ce-99c4-b79d-f8fa-ba7029d3826d-d0b960ed" class="table-th t-content title">
-											Blessedness of True Fatherhood
-										</div>
-									</div>
-									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<div class="w-icon-dropdown-toggle"></div>
-											<div class="text-block-2">More</div>
-										</div>
-										<nav class="w-dropdown-list">
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
-								<div class="table-headings t-content">
-									<div id="w-node-_3fc25860-3bba-211a-fe16-2e0311af5e85-d0b960ed" class="table-image-block">
-										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
-										<div id="w-node-_3fc25860-3bba-211a-fe16-2e0311af5e87-d0b960ed" class="table-th t-content title">
-											Blessedness of True Fatherhood
-										</div>
-									</div>
-									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<div class="w-icon-dropdown-toggle"></div>
-											<div class="text-block-2">More</div>
-										</div>
-										<nav class="w-dropdown-list">
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
-								<div class="table-headings t-content">
-									<div id="w-node-a85edffc-93bb-5654-f13e-bf700b59dd80-d0b960ed" class="table-image-block">
-										<img src="images/IMG_2021.JPG" loading="lazy" width="56" alt="" class="t-img" />
-										<div id="w-node-a85edffc-93bb-5654-f13e-bf700b59dd82-d0b960ed" class="table-th t-content title">
-											Blessedness of True Fatherhood
-										</div>
-									</div>
-									<div class="table-th t-content">Pst.(Mrs) Modupeola Thompson Ehima</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div class="table-th t-content">18/06/2023</div>
-									<div data-hover="false" data-delay="0" class="table-more w-dropdown">
-										<div class="dropdown-toggle w-dropdown-toggle">
-											<div class="w-icon-dropdown-toggle"></div>
-											<div class="text-block-2">More</div>
-										</div>
-										<nav class="w-dropdown-list">
-											<a href="#" class="w-dropdown-link">Link 1</a>
-											<a href="#" class="w-dropdown-link">Link 2</a>
-											<a href="#" class="w-dropdown-link">Link 3</a>
-										</nav>
-									</div>
-								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="confirm-delete-modal--wrapper" id="messages--confirm-delete-modal">
+				<div class="confirm-delete-modal">
+					<h5 id="delete-modal-title">Are you sure you want to delete this message?</h5>
+					<div class="modal--btn-group" id="modal-btn-group">
+						<button id="messages-modal-button-close">No</button>
+						<button id="messages-modal-button-yes" data-message-uuid="0">Yes</button>
 					</div>
 				</div>
 			</div>
@@ -285,5 +191,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="../js/webflow.js" type="text/javascript"></script>
+		<script src="../js/messages.js" type="text/javascript"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</body>
 </html>
