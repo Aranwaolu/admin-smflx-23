@@ -11,6 +11,7 @@
 		<meta content="Webflow" name="generator" />
 		<link href="css/normalize.css" rel="stylesheet" type="text/css" />
 		<link href="css/webflow.css" rel="stylesheet" type="text/css" />
+		<link href="css/forms.css" rel="stylesheet" type="text/css" />
 		<link href="css/livleymeetings-admin.webflow.css" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -112,7 +113,7 @@
 										</div>
 										<div class="new-form-bolck">
 											<label for="name-3" class="new-form-label">Audio Message</label>
-											<input type="file" name="audio_url" />
+											<input type="file" name="audio" />
 										</div>
 
 										<div class="new-form-bolck">
@@ -128,12 +129,13 @@
 										<div class="new-form-bolck">
 											<label for="name-2" class="new-form-label">Date</label
 											><input
-												type="text"
+												type="date"
 												class="new-form-input w-input"
-												maxlength="256"
+												min="1979-01"
+												max="2002-12"
 												name="date"
 												data-name="Name 2"
-												placeholder="DD/MM/YYYY"
+												placeholder="YYYY-MM-DD"
 												id="name-2"
 											/>
 										</div>
@@ -162,13 +164,97 @@
 												id="name-2"
 											/>
 										</div>
-										<input type="submit" value="Submit" data-wait="Please wait..." class="dash-btn w-button" />
+										<input
+											name="audio-messsage-submit"
+											id="audio-messsage-submit"
+											type="submit"
+											value="Submit"
+											data-wait="Please wait..."
+											class="audio-messsage-submit-input"
+										/>
+										<label for="audio-messsage-submit" class="audio-messsage--upload">
+											<span>Submit</span>
+											<svg
+												class="audio-messsage--upload-svg"
+												version="1.1"
+												id="L9"
+												xmlns="http://www.w3.org/2000/svg"
+												xmlns:xlink="http://www.w3.org/1999/xlink"
+												x="0px"
+												y="0px"
+												viewBox="0 0 100 100"
+												enable-background="new 0 0 0 0"
+												xml:space="preserve"
+											>
+												<path
+													fill="#fff"
+													d="M73,50c0-12.7-10.3-23-23-23S27,37.3,27,50 M30.9,50c0-10.5,8.5-19.1,19.1-19.1S69.1,39.5,69.1,50"
+												>
+													<animateTransform
+														attributeName="transform"
+														attributeType="XML"
+														type="rotate"
+														dur=".6s"
+														from="0 50 50"
+														to="360 50 50"
+														repeatCount="indefinite"
+													/>
+												</path>
+											</svg>
+										</label>
 									</form>
-									<div class="message-form-done">
+									<div class="message-form-done" id="message-form-done">
 										<div>Thank you! Your submission has been received!</div>
+										<svg
+											class="message-form-done-btn"
+											height="20px"
+											width="20px"
+											version="1.1"
+											id="Capa_1"
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink"
+											viewBox="0 0 26 26"
+											xml:space="preserve"
+										>
+											<g>
+												<path
+													style="fill: #fff"
+													d="M21.125,0H4.875C2.182,0,0,2.182,0,4.875v16.25C0,23.818,2.182,26,4.875,26h16.25
+		C23.818,26,26,23.818,26,21.125V4.875C26,2.182,23.818,0,21.125,0z M18.78,17.394l-1.388,1.387c-0.254,0.255-0.67,0.255-0.924,0
+		L13,15.313L9.533,18.78c-0.255,0.255-0.67,0.255-0.925-0.002L7.22,17.394c-0.253-0.256-0.253-0.669,0-0.926l3.468-3.467
+		L7.221,9.534c-0.254-0.256-0.254-0.672,0-0.925l1.388-1.388c0.255-0.257,0.671-0.257,0.925,0L13,10.689l3.468-3.468
+		c0.255-0.257,0.671-0.257,0.924,0l1.388,1.386c0.254,0.255,0.254,0.671,0.001,0.927l-3.468,3.467l3.468,3.467
+		C19.033,16.725,19.033,17.138,18.78,17.394z"
+												/>
+											</g>
+										</svg>
 									</div>
-									<div class="message-form-fail">
+
+									<div class="message-form-fail" id="message-form-fail">
 										<div>Oops! Something went wrong while submitting the form.</div>
+										<svg
+											class="message-form-fail-btn"
+											height="20px"
+											width="20px"
+											version="1.1"
+											id="Capa_1"
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink"
+											viewBox="0 0 26 26"
+											xml:space="preserve"
+										>
+											<g>
+												<path
+													style="fill: #fff"
+													d="M21.125,0H4.875C2.182,0,0,2.182,0,4.875v16.25C0,23.818,2.182,26,4.875,26h16.25
+		C23.818,26,26,23.818,26,21.125V4.875C26,2.182,23.818,0,21.125,0z M18.78,17.394l-1.388,1.387c-0.254,0.255-0.67,0.255-0.924,0
+		L13,15.313L9.533,18.78c-0.255,0.255-0.67,0.255-0.925-0.002L7.22,17.394c-0.253-0.256-0.253-0.669,0-0.926l3.468-3.467
+		L7.221,9.534c-0.254-0.256-0.254-0.672,0-0.925l1.388-1.388c0.255-0.257,0.671-0.257,0.925,0L13,10.689l3.468-3.468
+		c0.255-0.257,0.671-0.257,0.924,0l1.388,1.386c0.254,0.255,0.254,0.671,0.001,0.927l-3.468,3.467l3.468,3.467
+		C19.033,16.725,19.033,17.138,18.78,17.394z"
+												/>
+											</g>
+										</svg>
 									</div>
 								</div>
 							</div>
@@ -184,7 +270,7 @@
 			crossorigin="anonymous"
 		></script>
 		<script src="../js/webflow.js" type="text/javascript"></script>
-		<script src="../js/forms.js" type="text/javascript"></script>
+		<script src="../js/messages-form.js" type="text/javascript"></script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</body>
 </html>

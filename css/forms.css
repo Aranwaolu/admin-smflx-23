@@ -1,0 +1,57 @@
+.audio-messsage--upload {
+	width: 140px;
+	height: 50px;
+	background-color: #c82127;
+	border-radius: 8px;
+	padding: 10px 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.audio-messsage--upload-svg {
+	width: 30px;
+	display: none;
+}
+
+.audio-messsage-submit-input {
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.message-form-done {
+	margin-top: 20px;
+	background: rgb(11, 158, 119);
+	padding: 20px;
+	width: 500px;
+	border-radius: 10px;
+	color: #fff;
+	letter-spacing: 0.05em;
+	display: flex;
+	justify-content: space-between;
+	display: none;
+}
+
+.message-form-done > svg,
+.message-form-fail > svg {
+	cursor: pointer;
+}
+
+.message-form-fail {
+	margin-top: 20px;
+	background: rgb(216, 54, 36);
+	padding: 20px;
+	width: 500px;
+	border-radius: 10px;
+	color: #fff;
+	letter-spacing: 0.05em;
+	display: flex;
+	justify-content: space-between;
+	display: none;
+}
