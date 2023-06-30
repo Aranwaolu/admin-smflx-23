@@ -99,10 +99,10 @@ yesBtn.addEventListener('click', () => {
 		document.getElementById('delete-modal-title').textContent = 'Deleting message...'
 		document.getElementById('modal-btn-group').style.display = 'none'
 		console.log('gonna delete this message ', yesBtn.dataset.messageUuid)
-		// axios
-		// 	.delete(`https://smflx-b64a687ce7fc.herokuapp.com/api/v1/messages/${Number(id)}`)
-		// 	.then((res) => resetModal())
-		// 	.catch((err) => console.error(err))
+		axios
+			.delete(`https://smflx-b64a687ce7fc.herokuapp.com/api/v1/messages/${id}`)
+			.then((res) => resetModal())
+			.catch((err) => console.error(err))
 	}
 })
 
